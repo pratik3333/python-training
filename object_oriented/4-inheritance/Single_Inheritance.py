@@ -20,11 +20,8 @@ class Employee:
 class programmer(Employee):
 
     def __init__(self,name,salary,role,languages):
-        self.name=name
-        self.salary=salary
-        self.role=role
+        super().__init__(name,salary,role)
         self.languages=languages
-
 
     def printprog(self):
         return f"The programmer's name is {self.name}.\nsalary is {self.salary}.\nrole is {self.role}.\nlanguages are {self.languages}"
