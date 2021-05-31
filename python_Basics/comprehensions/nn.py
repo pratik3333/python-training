@@ -6,7 +6,7 @@ my_list=[]
 for n in nums:
     my_list.append(n*n)
 print(my_list)
-    
+
 
 my_list=[n*n for n in nums]
 print(my_list)
