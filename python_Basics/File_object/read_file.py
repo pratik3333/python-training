@@ -1,2 +1,4 @@
 
-f=open('dict_compare')
+
+with open('abc.py','w') as f:
+    f.write('test')
