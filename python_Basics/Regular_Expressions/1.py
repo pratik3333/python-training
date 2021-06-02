@@ -15,7 +15,8 @@ January 2007 – Corus Group, $12 billion[8]
 March 2007 – PT Kaltim Prima Coal (KPC) (Bumi Resources), $1.1 billion
 April 2007 – Campton Place Hotel, San Francisco, $60 million
 January 2008 – Imacid Chemical Company, Morocco[9]
-February 2008 – General Chemical Industrial Products, $1 billion 5746-78243-7842'''
+February 2008 – General Chemical Industrial Products, $1 billion 5746-78243-7842
+Pratikkagale@gmail.com'''
 
 #findout,search,split,sub,finditer
 
@@ -36,7 +37,8 @@ February 2008 – General Chemical Industrial Products, $1 billion 5746-78243-78
 #patt=re.compile(r'\bMarch')   #\A returns a match where the specified characters are at the beginning or at the end of a word
 #patt=re.compile(r'06\b')   #\A returns a match where the specified characters are at the beginning or at the end of a word
 #patt=re.compile(r'\d{5}-\d{4}')
-patt=re.compile(r'\d{10}')
+#patt=re.compile(r'\d{10}')
+patt=re.compile(r'[a-zA-z]+[a-zA-Z]+\.com')
 matches=patt.finditer(my_str)
 for match in matches:
     print(match)
