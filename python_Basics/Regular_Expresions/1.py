@@ -26,7 +26,8 @@ February 2008 – General Chemical Industrial Products, $1 billion'''
 #patt=re.compile(r'ion$')  # $ Ends with
 #patt=re.compile(r'al*')  # * Zero or more accurrences
 #patt=re.compile(r'ber{2}')  # {} Exactly number of accurrences
-patt=re.compile(r'(ber){2}')  # {} Exactly number of accurrences
+#patt=re.compile(r'(ber){1}')  # () Capture and group
+patt=re.compile(r'ber{1}|n')  # | Either or
 
 matches=patt.finditer(my_str)
 for match in matches:
