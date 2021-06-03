@@ -23,4 +23,5 @@ def display_info(name,age):
     print(f'dispaly_info ran with arguments [{name} {age}]')
 display_info('john',24)
 
+
 display()
