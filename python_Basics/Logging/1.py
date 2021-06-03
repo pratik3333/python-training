@@ -1,9 +1,9 @@
 
 
 import logging
-import string
+import Employee
 
-logging.basicConfig(filename='test.log',level=logging.DEBUG)
+logging.basicConfig(filename='sample.log',level=logging.DEBUG)
 
 
 
@@ -20,4 +20,6 @@ add_result=add(num_1,num_2)
 #logging.warning(f'add {num_1},{num_2} = {add_result}')
 #logging.error(f'add {num_1},{num_2} = {add_result}')
 #logging.critical(f'add {num_1},{num_2} = {add_result}')
-logging.debug(f'add {num_1},{num_2} = {add_result}')
+logging.debug (f'add {num_1},{num_2} = {add_result}'
+               )
+#
