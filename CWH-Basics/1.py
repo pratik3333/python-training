@@ -3,6 +3,6 @@ var3=50
 var2=int(input("Enter the value: "))
 
 if var1<var2<=var3:
-    print("good")
+    print("Less than 50")
 else:
-    print("Wrong")
+    print("greater than 50")
