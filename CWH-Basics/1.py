@@ -1,8 +1,9 @@
-var1=10
-var3=50
-var2=int(input("Enter the value: "))
+var1=6
+var2=56
 
-if var1<var2<=var3:
-    print("Less than 50")
+var3=int(input("Enter the value: "))
+
+if var3>var2:
+    print("Greater")
 else:
-    print("greater than 50")
+    print("Lesser")
