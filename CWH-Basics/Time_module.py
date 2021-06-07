@@ -14,3 +14,4 @@ print("While loop in ran",time.time()-initial,"seconds")
 
 localtime=time.asctime(time.localtime(time.time()))
 print(localtime)
+
