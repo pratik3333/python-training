@@ -16,12 +16,12 @@ class Employee:
         cls.no_of_leaves=new_leaves
 
     @classmethod
-    def from_str(cls,string):
+    def from_dash(cls,string):
     #     param=string.split('-')
     #     return cls(param[0],param[1],param[2])
         return cls(*string.split('-'))
 
 emp1=Employee('pratik','kagale',9434)
-emp2=Employee.from_str('corey-schafer-4365')
+emp2=Employee.from_dash('corey-schafer-4365')
 
 emp2.info()
