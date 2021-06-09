@@ -26,3 +26,4 @@ emp2=Employee.from_dash('corey-schafer-4365')
 
 import inspect
 print(inspect.getmembers(emp1))
+print(inspect.getmembers(emp2))
