@@ -6,7 +6,7 @@
 #     raise Exception("Number are not allowed")
 #
 # print(f"Hello {a}")
-
+#
 c=input("Enter your name:").lower()
 try:
     print(a)
