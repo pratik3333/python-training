@@ -1,8 +1,8 @@
 apples=int(input("Enter the number of apples:\n"))
 mx=int(input("Enter the minimum number of check:\n"))
-mn=int(input("Enter the minimum number of check:\n"))
+mn=int(input("Enter the miximum number of check:\n"))
 
-for i in range(mx, mn+1):
+for i in range(mn, mx+1):
     if apples/i == 0:
         print(f"{i} is a divisor of {apples}")
     else:
