@@ -5,4 +5,3 @@ for item in list_1:
         divide_by_3.append(item)
 print('Without using list comprehensions',divide_by_3)
 print("Using List comprehensions",[item for item in list_1 if item%3==0])
-        
