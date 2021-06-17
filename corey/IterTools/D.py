@@ -1,0 +1,10 @@
+import itertools
+counter=itertools.cycle([1,2,3])
+counter1=itertools.cycle(['on','off'])
+print(next(counter))
+print(next(counter1))
+print(next(counter))
+print(next(counter1))
+print(next(counter))
+print(next(counter1))
+print(next(counter))
