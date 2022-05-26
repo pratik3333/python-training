@@ -10,7 +10,8 @@ class Employee:
         Employee.number_of_emps +=1
 
     def fullname(self):
-        return '{} {}'.format(self.first,self.last)
+        return f'{self.first} {self.last}'
+        # return '{} {}'.format(self.first,self.last)
 
     @classmethod
     def from_string(cls,emp_string):
@@ -35,8 +36,10 @@ emp3='John-Smith-98000'
 
 new_emp3=Employee.from_string(emp3)
 print(Employee.number_of_emps)
+print(emp2.fullname())
+
 
 import datetime
-my_date = datetime.date(2021,5,15)
+my_date = datetime.date(2021,5,18)
 
 print(Employee.is_workday(my_date))
