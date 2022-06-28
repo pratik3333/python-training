@@ -1,12 +1,10 @@
 
-b=20
+a=int(input("enter value a : "))
+b=int(input("enter value b : "))
 
-
-d=int(input("enter value d : "))
-
-if (b>d):
-    print("b is greter than d")
+if (a>b):
+    print("a is greter than b")
 else:
-    print("d is is greter than b")
+    print("b is is greter than a")
 
 print("Thank you")
