@@ -30,7 +30,11 @@ class Item:
             items = list(reader)
 
         for item in items:
-            print(item)
+            Item(
+                name=item.get('name'),
+                price=float(item.get('price')),
+                quantity=float(item.get('quantity')),
+            )
 
 
     def __repr__(self):
@@ -39,3 +43,4 @@ class Item:
 # for instance in Item.all:
 #     print(instance.name)
 Item.instantiate_from_csv()
+print(Item.all)
