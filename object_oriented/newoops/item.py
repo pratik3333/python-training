@@ -10,12 +10,26 @@ class Item:
 
 
         #Assign to self object
-        self.name = name
+        self.__name = name
         self.price=price
         self.quantity=quantity
 
         #Action to execute
         Item.all.append(self)
+
+    @property
+    # Property Decorator = Read-Only Attribute
+    def name(self):
+        print("You are trying to get name")
+        return self.__name
+
+    @name.setter
+    def name(self, value):
+        #print("You are trying to set")
+        if len(value) > 10:
+            raise Exception("The name is too long!")
+        else:
+            self.__name = value
 
     def calculate_total_price(self):
         return self.price * self.quantity
@@ -36,10 +50,6 @@ class Item:
                 quantity=float(item.get('quantity')),
             )
 
-
-    def __repr__(self):
-        return f"{self.__class__.__name__}('{self.name}', {self.price}, {self.quantity}')"
-
     @staticmethod
     def is_integer(num):
         # We will count out the floats that are point zero
@@ -52,3 +62,5 @@ class Item:
         else:
             return False
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}('{self.name}', {self.price}, {self.quantity}')"
