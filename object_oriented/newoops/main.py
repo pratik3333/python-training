@@ -8,5 +8,3 @@ item1 = Item("MyItem", 750, 6)
 # print(item1.price)
 
 item1.send_email()
-
-item1.connect()

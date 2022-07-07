@@ -78,17 +78,17 @@ class Item:
     def __connect(self, smpt_server):
         pass
 
-    def prepare_body(self):
+    def __prepare_body(self):
         return f"""
         Hello Someone.
         We have {self.name} {self.quantity} times.
         Regards, pratik
         
          """
-    def send(self):
+    def __send(self):
         pass
 
     def send_email(self):
-        self.connect()
-        self.prepare_body()
-        self.send()
+        self.__connect('')
+        self.__prepare_body()
+        self.__send()
