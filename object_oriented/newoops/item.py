@@ -11,11 +11,22 @@ class Item:
 
         #Assign to self object
         self.__name = name
-        self.price=price
+        self.__price=price
         self.quantity=quantity
 
         #Action to execute
         Item.all.append(self)
+
+    @property
+    def price(self):
+        return self.__price
+
+    def apply_discount(self):
+        self.__price = self.__price * self.pay_rate
+
+    def apply_increment(self, increment_value):
+        self.__price = self.price + self.__price * increment_value
+
 
     @property
     # Property Decorator = Read-Only Attribute
@@ -32,10 +43,8 @@ class Item:
             self.__name = value
 
     def calculate_total_price(self):
-        return self.price * self.quantity
+        return self.__price * self.quantity
 
-    def apply_discount(self):
-        self.price = self.price * self.pay_rate
 
     @classmethod
     def instantiate_from_csv(cls):
@@ -63,4 +72,23 @@ class Item:
             return False
 
     def __repr__(self):
-        return f"{self.__class__.__name__}('{self.name}', {self.price}, {self.quantity}')"
+        return f"{self.__class__.__name__}('{self.name}', {self.__price}, {self.quantity}')"
+
+
+    def __connect(self, smpt_server):
+        pass
+
+    def prepare_body(self):
+        return f"""
+        Hello Someone.
+        We have {self.name} {self.quantity} times.
+        Regards, pratik
+        
+         """
+    def send(self):
+        pass
+
+    def send_email(self):
+        self.connect()
+        self.prepare_body()
+        self.send()
