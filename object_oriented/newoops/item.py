@@ -31,7 +31,7 @@ class Item:
     @property
     # Property Decorator = Read-Only Attribute
     def name(self):
-        print("You are trying to get name")
+        #print("You are trying to get name")
         return self.__name
 
     @name.setter
